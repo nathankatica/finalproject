@@ -1,0 +1,158 @@
+Category;CONJUGATION
+etre;suis,es,est,sommes,etes,sont
+avoir;j'ai,as,a,avons,avez,ont
+aimer;j'aime,t'aimes,aime,aimons,aimez,aiment
+aller;vais,vas,va,allons,allez,vont
+faire;fais,fais,fait,faisons,faites,font
+manger;mange,manges,mange,mangeons,mangez,mangent
+prendre;prends,prends,prend,prenons,prenez,prennent
+boire;bois,bois,boit,buvons,buvez,boivent 
+comprendre;comprends,comprends,comprend,comprenons,comprenez,comprennent
+apprendre;apprends,apprends,apprend,apprenons,apprenez,apprennent
+Category;ARTICLES
+definite articles(m,f,plural,vowel);le,la,les,l'
+indefinite articles(m,f,plural,vowel);un,une,des,d'
+partitive articles(m,f,plural,vowel);du,de la,des,del'
+possesive articles(sing./m.);mon,ton,son,notre,votre,leur 
+possesive articles(sing./f.);ma,ta,sa,notre,votre,leur
+possesive articles(plural);mes,tes,ses,nos,vos,leurs
+demonstrative adjectives(m,f,plural,vowel);ce,cette,ces,cet
+indirect object pronouns;me,te,lui,nous,vous,leur
+Category;DEFINITIONS
+to ask;demander a
+to give to;donner a
+to send to;envoyer a
+to show to;montrer a
+to ask a question;poser une question
+to lend to;preter a
+to phone;telephoner a
+to buy;acheter
+to call;appeler
+to use;utiliser
+to share;partager
+to make;fabriquer
+to change;changer
+to search;chercher
+to begin;commencer
+to dance;danser
+to manage;diriger
+to eat lunch;déjeuner
+to dislike;détester
+to listen;écouter
+to delete;effacer
+to take;emmener
+to wait;espérer
+to throw;jeter
+to threaten;menacer
+to swim;nager
+to speak;parler
+to share;partager
+to pay;payer
+to peel;peler
+to weigh;peser
+to place;placer
+to practice;pratiquer
+to prefer;préférer
+to prepare;préparer
+to watch;regarder
+to set;régler
+to suggest;suggérer
+to trace;tracer
+to return;rentrer
+Category;PHRASES USING AVOIR
+years old;ans
+need;besoin (de)
+hot;chaud
+lucky;de la chance
+feel like;envie (de)
+cold;froid
+ashamed (of);honte (de)
+look like;l'air
+afraid of;peur de
+right;raison
+sleepy;sommeil
+wrong;tort
+hungry;faim
+Category;PREPOSITIONS
+on;sur
+in;en
+to;á
+to the (sing.,m.);au
+to the (plural);aux
+in;dans
+next to;a cote de
+to the right of;a droite de
+to the left of;a gauche de
+in;dans
+behind;derriére
+in front of;devant
+in;en
+facing,across;en face de
+between;entre
+far from;loin de
+by;par
+close to,near;prés de
+under;sous
+on;sur
+bless you;a vos/tes souhaits
+yesterday;hier
+Category;ADJECTIVES
+pleasant;agreable
+fun;amusant(e)
+brilliant;brilliant(e)
+active;actif,active
+beautiful;belle
+handsome;beau
+brave;courageux,courageuse
+curious;curieux,curieuse
+discreet;discret,discrete
+sweet;doux
+boring;ennuyeux,ennuyeuse
+foreign;etranger,etrangere
+favorite;favori,favorite
+proud;fier,fiere
+crazy;fou,folle
+generous;genereux,genereuse
+nice;gentil,gentille
+worried;inquiet,inquiete
+jealous;jaloux,jalouse
+happy;heureux
+naive;naif,naive
+nervous;neverux,nerveuse
+serious;serieux,serieuse
+athletic;sportif,sportive
+hardworking;travailleur, travailleuse
+young;jeune
+old;vieux,vieille
+Category;WEATHER
+le (au) printemps;Il fait beau
+l'ete (m.);Il fait froid
+l'hiver (m.);Il fait chaud
+l'automne (m.);il fait du vent
+Category;PAST PARTICIPLES
+surprendre;surpris
+prendre;pris
+apprendre;appris
+comprendre;compris
+choisir;choisi
+finir;fini
+partir;parti
+sortir;sorti
+sentir;senti
+faire;fait
+repondre;repondu
+courir;couru
+lire;lu
+dire;dit
+ecrire;ecrit
+conduire;conduit
+boire;bu
+pleuvoir;plu
+pouvoir;pu
+vouloir;voulu
+savoir;su
+devoir;du
+voir;vu
+recevoir;reçu
+ouvrir;ouvert
+offrir;offert
