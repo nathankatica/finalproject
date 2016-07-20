@@ -18,9 +18,9 @@ for splitline in catList:
 
 def finalFunc(lb,ub):
 	for i,line in enumerate(open(filename,'r')):
-		if i in range(lb,ub):
+		if i in range(lb+1,ub):
 			print(line.split(';')[0])
-
+print("SEARCH FOR A WORD")
 for i in betterCat:
 	print(i)
 
@@ -30,19 +30,19 @@ cList=[]
 
 cat_selection=input("Which category would you like to select? ")
 
-if cat_selection in betterCat[0:len(betterCat)-1]:
+if cat_selection.upper() in betterCat[0:len(betterCat)-1]:
 	for i,cat in enumerate(betterCat):
-		if cat_selection in cat:
+		if cat_selection.upper() in cat:
 			iList.append(i)
 			iList.append(i+1)
-	for i,dog in enumerate(open(filename,'r')):
-		if betterCat[iList[0]] in dog:
+	for i,fileline in enumerate(open(filename,'r')):
+		if betterCat[iList[0]] in fileline:
 			bList.append(i)
-		if betterCat[iList[1]] in dog:
+		if betterCat[iList[1]] in fileline:
 			bList.append(i)
 	finalFunc(bList[0],bList[1])
 	
-	selection=input("Please enter your selection here: ").lower()
+	selection=input("Which word would you like to practice? ").lower()
 	if selection in wordDict.keys():
 		answer=input("What is the correct answer? ").lower()
 		if answer == wordDict[selection]:
@@ -69,6 +69,16 @@ elif cat_selection in betterCat:
 			print("Sorry, answer is: ",wordDict[selection])
 	else:
 		print("Sorry, that word isn't stored. Please try again.")
+
+elif cat_selection == "SEARCH FOR A WORD":
+	wordsearch=input("Enter word here: ")
+	for line in open(filename,'r'):
+			if wordsearch in line:
+				guess=input("Enter answer here: ")
+				if guess == line.split(';')[1].strip():
+					print("Correct!")
+				else:
+					print("Sorry, answer is: ", line.split(';')[1])
 
 else:
 	print("Sorry, that category isn't stored. Please try again.")
