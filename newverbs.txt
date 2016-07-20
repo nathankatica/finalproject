@@ -9,6 +9,9 @@ prendre;prends,prends,prend,prenons,prenez,prennent
 boire;bois,bois,boit,buvons,buvez,boivent 
 comprendre;comprends,comprends,comprend,comprenons,comprenez,comprennent
 apprendre;apprends,apprends,apprend,apprenons,apprenez,apprennent
+conduire;conduis,conduis,conduit,conduisons,conduisez,conduisent
+mettre;mets,mets,met,mettons,mettez,mettent
+rire;ris,ris,rit,rions,riez,rient
 Category;ARTICLES
 definite articles(m,f,plural,vowel);le,la,les,l'
 indefinite articles(m,f,plural,vowel);un,une,des,d'
@@ -36,12 +39,12 @@ to search;chercher
 to begin;commencer
 to dance;danser
 to manage;diriger
-to eat lunch;déjeuner
-to dislike;détester
-to listen;écouter
+to eat lunch;dÃ©jeuner
+to dislike;dÃ©tester
+to listen;Ã©couter
 to delete;effacer
 to take;emmener
-to wait;espérer
+to wait;espÃ©rer
 to throw;jeter
 to threaten;menacer
 to swim;nager
@@ -52,13 +55,32 @@ to peel;peler
 to weigh;peser
 to place;placer
 to practice;pratiquer
-to prefer;préférer
-to prepare;préparer
+to prefer;prÃ©fÃ©rer
+to prepare;prÃ©parer
 to watch;regarder
-to set;régler
-to suggest;suggérer
+to set;rÃ©gler
+to suggest;suggÃ©rer
 to trace;tracer
 to return;rentrer
+to bring;m'apporter
+to wait;attendre
+to go down;descendre
+to hear;entendre
+to waste(one's time);perdre(son temps)
+to give back;rendre(a)
+to visit someone;rendre visite(a)
+to respond;repondre(a)
+to sell;vendre
+to build;construire
+to destroy;detruire
+to produce;produire
+to reduce;reduire
+to translate;traduire
+to allow;permettre
+to promise;promettre
+to smile;sourire
+to spend time;passer du temps
+to play;jouer
 Category;PHRASES USING AVOIR
 years old;ans
 need;besoin (de)
@@ -76,7 +98,7 @@ hungry;faim
 Category;PREPOSITIONS
 on;sur
 in;en
-to;á
+to;Ã¡
 to the (sing.,m.);au
 to the (plural);aux
 in;dans
@@ -84,14 +106,14 @@ next to;a cote de
 to the right of;a droite de
 to the left of;a gauche de
 in;dans
-behind;derriére
+behind;derriÃ©re
 in front of;devant
 in;en
 facing,across;en face de
 between;entre
 far from;loin de
 by;par
-close to,near;prés de
+close to,near;prÃ©s de
 under;sous
 on;sur
 bless you;a vos/tes souhaits
@@ -129,6 +151,10 @@ le (au) printemps;Il fait beau
 l'ete (m.);Il fait froid
 l'hiver (m.);Il fait chaud
 l'automne (m.);il fait du vent
+Category;FOOD
+piece;un morceau
+bottle;une boteille
+glass;un verre
 Category;PAST PARTICIPLES
 surprendre;surpris
 prendre;pris
@@ -153,6 +179,15 @@ vouloir;voulu
 savoir;su
 devoir;du
 voir;vu
-recevoir;reçu
+recevoir;reÃ§u
 ouvrir;ouvert
 offrir;offert
+mettre;mis
+permettre;permis
+promettre;promis
+conduire;conduit
+construire;construit
+detruire;detruit
+produire;produit
+reduire;reduit
+traduire;traduit
