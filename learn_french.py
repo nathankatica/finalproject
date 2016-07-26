@@ -34,7 +34,7 @@ mode_selection = input("Which mode would you like: Practice or Test? ")
 if mode_selection.lower() == 'practice':
 	print("\nIn practice mode, user can practice as many times as they want.")
 	print("If you wish to leave, select category QUIT when choosing a category.\n")
-	input("Are you ready? Press any key to begin.")
+	input("Are you ready? Press enter to begin.")
 
 	while a != 'quit':
 		print("\nSEARCH FOR WORD")
