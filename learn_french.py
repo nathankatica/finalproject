@@ -47,7 +47,6 @@ def wordQuiz(word_selection):
 	return 0
 
 #Helper function that prints all the term choices for a category 
-#and then calls wordQuiz passing user input as the argument
 def printCategoryTerms(cat_selection):	
 
 		#If the category selection is not the last term in the category list
@@ -76,9 +75,6 @@ def printCategoryTerms(cat_selection):
 			iList.append(cList[len(cList)-1])
 			printLineRange(iList[0],iList[1])
 
-		elif cat_selection.upper() == "SEARCH FOR A WORD":
-			wordQuiz(input("Enter word here: "))
-
 		else:
 			print("Sorry, that category isn't stored. Please try again.")
 
@@ -95,7 +91,7 @@ if mode_selection.lower() == 'practice':
 	print("\nIn practice mode, user can practice as many times as they want.")
 	print("If you wish to leave, select category QUIT when choosing a category.\n")
 	input("Are you ready? Press enter to begin.")
-	print("\nSEARCH FOR WORD")
+	print("\nSEARCH FOR A WORD")
 	for i in catList:
 		print(i)
 	print("QUIT\n")
@@ -103,9 +99,17 @@ if mode_selection.lower() == 'practice':
 	while chosen_category != 'quit':
 		chosen_category=input("Which category would you like to select? ")
 		if chosen_category != 'quit':
-			printCategoryTerms(chosen_category)
-			correct += wordQuiz(input("Which word would you like to practice? ").lower())
-			counter += 1
+			if chosen_category.upper() == "SEARCH FOR A WORD":
+				word_to_search=input("Enter word here: ")
+				if word_to_search in wordDict.keys():
+					correct += wordQuiz(word_to_search)
+					counter += 1
+				else:
+					print("Sorry, that word isn't stored. Please try again.")
+			else:
+				printCategoryTerms(chosen_category)
+				correct += wordQuiz(input("Which word would you like to practice? ").lower())
+				counter += 1
 	print('Grade Report:', correct, '/', counter)
 
 
@@ -118,11 +122,11 @@ elif mode_selection.lower() == 'test':
 	input("Are you ready? Press enter to begin.")
 
 	while counter < 10:
-		print("\nSEARCH FOR WORD")
+		print("\nSEARCH FOR A WORD")
 		for i in catList:
 			print(i)
 		print("\n")	
-		printCategoryTerms(input("Which category would you like to select? "))
-		correct += wordQuiz(input("Which word would you like to practice? ").lower())
-		counter += 1
+		if printCategoryTerms(input("Which category would you like to select? ")) != "Already Tested" or "Problem":
+			correct += wordQuiz(input("Which word would you like to practice? ").lower())
+			counter += 1
 	print('Grade Report:', correct, '/', counter)
