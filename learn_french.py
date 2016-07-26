@@ -116,7 +116,7 @@ if mode_selection.lower() == 'practice':
 #TEST MODE
 if mode_selection.lower() == 'test':
 	print("\nTest mode consists of 10 rounds.\n")
-	input("Are you ready? Press any key to begin.")
+	input("Are you ready? Press enter to begin.")
 
 	while counter < 10:
 		print("\nSEARCH FOR WORD")
