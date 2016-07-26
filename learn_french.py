@@ -8,9 +8,9 @@ import pprint as pp
 filename=sys.argv[1]
 wordDict={}
 splitList=[]
-iList=[]
-bList=[]
-cList=[]
+catRank=[]
+fileLoc=[]
+numFileList=[]
 correct = 0
 a = ''
 
@@ -52,36 +52,42 @@ def printCategoryTerms(cat_selection):
 		#If the category selection is not the last term in the category list
 		if cat_selection.upper() in catList[0:len(catList)-1]:
 			for i,cat in enumerate(catList):
+				#Append the indexes for the ith and (i+1)th category
 				if cat_selection.upper() in cat:
-					iList.append(i)
-					iList.append(i+1)
+					catRank.append(i)
+					catRank.append(i+1)
 			for i,fileline in enumerate(open(filename,'r')):
-				if catList[iList[0]] in fileline:
-					bList.append(i)
-				if catList[iList[1]] in fileline:
-					bList.append(i)
-			printLineRange(bList[0],bList[1])
+				#Search for ith and (i+1)th category in file and append their locations
+				if catList[catRank[0]] in fileline:
+					fileLoc.append(i)
+				if catList[catRank[1]] in fileline:
+					fileLoc.append(i)
+			#Pass the locations as an argument to printLineRange
+			printLineRange(fileLoc[0],fileLoc[1])
 
-		#If the category selection is the last term in the category list, 
+		#Special case: if the category selection is the last term in the category list, 
 		#it cannot use the index of the next Category;NAME from the enumerated lines 
 		#of the file as an upper bound. 
 		#Therefore, the highest index in the enumerated lines of the file is used.
 		#More precisely, it uses the length of a list of all the indices minus one.
 		elif cat_selection.upper() in catList:
+			#The first term of catRank should be the lb, which is the location of the last category.
+			#The ub is the last line in the file.
 			for i,line in enumerate(open(filename,'r')):
-				cList.append(i)
+				numFileList.append(i)
 				if cat_selection.upper() in line:
-					iList.append(i)
-			iList.append(cList[len(cList)-1])
-			printLineRange(iList[0],iList[1])
+					catRank.append(i)
+			catRank.append(numFileList[len(numFileList)-1])
+			printLineRange(catRank[0],catRank[1])
 
 		else:
 			print("Sorry, that category isn't stored. Please try again.")
 			return "Problem"
 
-		del iList[0:]
-		del bList[0:]
-		del cList[0:]
+		#Clear the cache
+		del catRank[0:]
+		del fileLoc[0:]
+		del numFileList[0:]
 
 def gamePlayer(numRounds):
 	counter = 0
@@ -94,6 +100,7 @@ def gamePlayer(numRounds):
 	while chosen_category != 'quit' and counter < numRounds:
 		chosen_category=input("Which category would you like to select? ")
 		if chosen_category != 'quit':
+			#"SEARCH FOR A WORD" is a special case. 
 			if chosen_category.upper() == "SEARCH FOR A WORD":
 				word_to_search=input("Enter word here: ")
 				if word_to_search in wordDict.keys():
@@ -101,10 +108,15 @@ def gamePlayer(numRounds):
 					counter += 1
 				else:
 					print("Sorry, that word isn't stored. Please try again.")
-			else:
+			else: 
+				#printCategoryTerms(chosen_category) will run smoothly if chosen_category is in catList.
 				if printCategoryTerms(chosen_category) != "Problem":
-					correct += wordQuiz(input("Which word would you like to practice? ").lower())
-					counter += 1
+					#Since input is a function, we need to assign it
+					#to a variable otherwise we cannot store its value.				#value.
+					word_selection=input("Which word would you like to practice? ")
+					correct += wordQuiz(word_selection.lower())
+					if word_selection in wordDict.keys():
+						counter += 1
 	print('Grade Report:', correct, '/', counter)
 
 mode_selection = input("Which mode would you like: Practice or Test? ")
