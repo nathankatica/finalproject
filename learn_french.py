@@ -77,26 +77,21 @@ def printCategoryTerms(cat_selection):
 
 		else:
 			print("Sorry, that category isn't stored. Please try again.")
+			return "Problem"
 
 		del iList[0:]
 		del bList[0:]
 		del cList[0:]
 
-mode_selection = input("Which mode would you like: Practice or Test? ")
-
-#PRACTICE MODE
-if mode_selection.lower() == 'practice':
+def gamePlayer(numRounds):
 	counter = 0
 	correct = 0
-	print("\nIn practice mode, user can practice as many times as they want.")
-	print("If you wish to leave, select category QUIT when choosing a category.\n")
-	input("Are you ready? Press enter to begin.")
 	print("\nSEARCH FOR A WORD")
 	for i in catList:
 		print(i)
 	print("QUIT\n")
 	chosen_category=''
-	while chosen_category != 'quit':
+	while chosen_category != 'quit' and counter < numRounds:
 		chosen_category=input("Which category would you like to select? ")
 		if chosen_category != 'quit':
 			if chosen_category.upper() == "SEARCH FOR A WORD":
@@ -107,26 +102,21 @@ if mode_selection.lower() == 'practice':
 				else:
 					print("Sorry, that word isn't stored. Please try again.")
 			else:
-				printCategoryTerms(chosen_category)
-				correct += wordQuiz(input("Which word would you like to practice? ").lower())
-				counter += 1
+				if printCategoryTerms(chosen_category) != "Problem":
+					correct += wordQuiz(input("Which word would you like to practice? ").lower())
+					counter += 1
 	print('Grade Report:', correct, '/', counter)
 
+mode_selection = input("Which mode would you like: Practice or Test? ")
 
-
-
-#TEST MODE
+if mode_selection.lower() == 'practice':
+	print("\nIn practice mode, user can practice up to 100 times.")
+	print("If you wish to leave, select category QUIT when choosing a category.\n")
+	input("Are you ready? Press enter to begin.")
+	gamePlayer(100)
+	
 elif mode_selection.lower() == 'test':
 	counter = 0
 	print("\nTest mode consists of 10 rounds.\n")
 	input("Are you ready? Press enter to begin.")
-
-	while counter < 10:
-		print("\nSEARCH FOR A WORD")
-		for i in catList:
-			print(i)
-		print("\n")	
-		if printCategoryTerms(input("Which category would you like to select? ")) != "Already Tested" or "Problem":
-			correct += wordQuiz(input("Which word would you like to practice? ").lower())
-			counter += 1
-	print('Grade Report:', correct, '/', counter)
+	gamePlayer(10)
