@@ -92,10 +92,6 @@ def printCategoryTerms(cat_selection):
 def gamePlayer(numRounds):
 	counter = 0
 	correct = 0
-	#print("\nSEARCH FOR A WORD")
-	#for i in catList:
-	#	print(i)
-	#print("QUIT\n")
 	chosen_category=''
 	while chosen_category != 'quit' and counter < numRounds:
 		print("\nSEARCH FOR A WORD")
