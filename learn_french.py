@@ -14,15 +14,15 @@ numFileList=[]
 correct = 0
 a = ''
 
-#Create a dictionary with keys of terms and values of answers
-#Create a list of lists of splitlines [Category, NAME\n]
+#Create a dictionary of {term:answer,...}
+#Create a list of lists of splitlines [[Category, NAME\n],...]
 for line in open(filename,'r'):
 	if 'Category' not in line:
 		wordDict[line.split(';')[0]]=line.split(';')[1].strip('\n')
 	else:
 		splitList.append(line.split(';'))
 
-#Create a list of categories 
+#Create a list of categories [NAME,...]
 catList=[]
 for splitline in splitList:
 	catList.append(splitline[1].strip('\n'))
@@ -112,7 +112,7 @@ def gamePlayer(numRounds):
 				#printCategoryTerms(chosen_category) will run smoothly if chosen_category is in catList.
 				if printCategoryTerms(chosen_category) != "Problem":
 					#Since input is a function, we need to assign it
-					#to a variable otherwise we cannot store its value.				#value.
+					#to a variable otherwise we cannot store its value.				
 					word_selection=input("Which word would you like to practice? ")
 					correct += wordQuiz(word_selection.lower())
 					if word_selection in wordDict.keys():
